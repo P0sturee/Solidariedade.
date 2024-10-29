@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidariedade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #1e88e5;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            color: #1e88e5;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .game-section {
+            padding: 10px;
+        }
+
+        .question {
+            font-size: 1.2em;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .options button {
+            background-color: #1e88e5;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .options button:hover {
+            background-color: #1565c0;
+        }
+
+        .result {
+            font-size: 1.2em;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Solidariedade</h1>
+    <p>Entenda e pratique a solidariedade de uma forma divertida e interativa!</p>
+</header>
+
+<section>
+    <h2>O que é Solidariedade?</h2>
+    <p>A solidariedade é a união entre as pessoas para ajudar umas às outras. É sobre se colocar no lugar do outro, entender as dificuldades e oferecer apoio. Seja com uma palavra amiga, uma ajuda prática ou até uma ação coletiva, ser solidário transforma o mundo e as pessoas ao nosso redor.</p>
+    <p>Ser solidário não é apenas uma ação isolada; é um estilo de vida que fortalece os laços e cria uma sociedade mais justa e igualitária.</p>
+</section>
+
+<section class="game-section">
+    <h2>Teste de Solidariedade</h2>
+    <p class="question">Qual dessas ações é uma demonstração de solidariedade?</p>
+    <div class="options">
+        <button onclick="checkAnswer(true)">Ajudar um colega com suas tarefas</button>
+        <button onclick="checkAnswer(false)">Ignorar alguém que precisa de ajuda</button>
+        <button onclick="checkAnswer(false)">Deixar o lixo na rua</button>
+        <button onclick="checkAnswer(true)">Participar de uma campanha de doação</button>
+    </div>
+    <p class="result" id="result"></p>
+</section>
+
+<script>
+    function checkAnswer(isCorrect) {
+        const result = document.getElementById("result");
+        if (isCorrect) {
+            result.textContent = "Parabéns! Essa é uma atitude solidária!";
+            result.style.color = "green";
+        } else {
+            result.textContent = "Ops! Essa ação não é muito solidária. Tente novamente!";
+            result.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
